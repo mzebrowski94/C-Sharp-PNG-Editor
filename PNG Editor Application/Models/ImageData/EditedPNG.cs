@@ -9,7 +9,7 @@ namespace PNG_Editor_Application.Models.ImageData
     /// <summary>
     /// Contains loaded and edited image data.
     /// </summary>
-    class EditedPNG
+    class EditedPNG : PNGImage
     {
 
     }

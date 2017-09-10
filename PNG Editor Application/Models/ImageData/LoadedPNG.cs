@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace PNG_Editor_Application.Models.ImageData
 {
     /// <summary>
-    /// Contains decoded png raw data.
+    /// Contains decoded PNG raw data.
     /// </summary>
-    class LoadedPNG
+    class LoadedPNG : PNGImage
     {
 
     }

@@ -1,12 +1,12 @@
-﻿<Window x:Class="PNG_Editor_Application.MainWindow"
+﻿<Window x:Class="PNG_Editor_Application.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PNG_Editor_Application"
+        xmlns:usercontrol="clr-namespace:PNG_Editor_Application.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid >
+        <usercontrol:ImageInformationsView Grid.Column="0" Grid.Row="0"/>
     </Grid>
 </Window>
