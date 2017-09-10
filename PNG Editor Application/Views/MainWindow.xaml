@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:usercontrol="clr-namespace:PNG_Editor_Application.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid >
-        <usercontrol:ImageInformationsView Grid.Column="0" Grid.Row="0"/>
-    </Grid>
+        Title="MainWindow" Height="350" Width="800">
+    <StackPanel Orientation="Horizontal">
+        <usercontrol:ImageInformationsView/>
+        <usercontrol:ImageHistogramView/>
+        <usercontrol:ImageHistogramView/>
+        <usercontrol:OperationAdjusterView/>
+    </StackPanel>
 </Window>

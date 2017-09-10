@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DynamicDataDisplay">
+      <HintPath>additional libs\DynamicDataDisplay\DynamicDataDisplay.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -49,12 +52,30 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="zlibnet">
+      <HintPath>additional libs\zlibnet v1.3.3\zlibnet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\OperationAdjusterViewModel.cs" />
+    <Compile Include="Views\ImageDisplayView.xaml.cs">
+      <DependentUpon>ImageDisplayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OperationAdjusterView.xaml.cs">
+      <DependentUpon>OperationAdjusterView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\ImageDisplayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ImageHistogramView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ImageInformationsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -67,8 +88,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ViewModels\ImageHistogramViewModel.cs" />
     <Compile Include="ViewModels\ImageInformationsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="Views\ImageHistogramView.xaml.cs">
+      <DependentUpon>ImageHistogramView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ImageInformationsView.xaml.cs">
       <DependentUpon>ImageInformationsView.xaml</DependentUpon>
     </Compile>
@@ -76,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\OperationAdjusterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ImageData\EditedPNG.cs" />
@@ -112,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
+    <Folder Include="Views\BottomPanel\" />
+    <Folder Include="Views\CenterPanel\" />
+    <Folder Include="Views\TopPanel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
