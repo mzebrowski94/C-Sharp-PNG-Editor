@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PNG_Editor_Application.Views.OperationAdjusterView"
+﻿<UserControl x:Class="PNG_Editor_Application.Views.TopPanel.OperationAdjusterView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -22,7 +22,7 @@
 
             <StackPanel Grid.Row="0">
                 <Label  FontSize="13" FontWeight="Bold" Content=" _Operation:" Target="{Binding ElementName=operationsComboBox}" HorizontalAlignment="Left"></Label>
-                <ComboBox  Name="menuComboBox" SelectionChanged="menuComboBox_SelectionChanged"></ComboBox>
+                <ComboBox  Name="menuComboBox" ></ComboBox>
             </StackPanel>
 
 
@@ -36,11 +36,11 @@
 
                 <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
                 <Label FontSize="10" FontWeight="Bold" Content="_P:" Target="{Binding ElementName=menuOperationComboBoxPoints}" VerticalAlignment="Center"/>
-                <ComboBox Name="menuOperationComboBoxPoints" SelectionChanged="menuOperationComboBoxPoints_SelectionChanged" Width="34" Height="20"></ComboBox>
+                <ComboBox Name="menuOperationComboBoxPoints" Width="34" Height="20"></ComboBox>
                 <Label Name="menuOperationPointXLabel" FontSize="10" FontWeight="Bold"  Content="_PX0:" Target="{Binding ElementName=menuOperationTextBoxValueX2}" VerticalAlignment="Center"/>
-                <TextBox Width="25" Height="20" Name="menuOperationTextBoxValuePointX" TextChanged="menuOperationTextBoxValuePointX_TextChanged" Background="WhiteSmoke"></TextBox>
+                <TextBox Width="25" Height="20" Name="menuOperationTextBoxValuePointX"  Background="WhiteSmoke"></TextBox>
                 <Label Name="menuOperationPointYLabel" FontSize="10" FontWeight="Bold" Content="_PY0:" Target="{Binding ElementName=menuOperationTextBoxValueY2}" VerticalAlignment="Center"/>
-                <TextBox Width="25" Height="20" Name="menuOperationTextBoxValuePointY" TextChanged="menuOperationTextBoxValuePointY_TextChanged" Background="WhiteSmoke"></TextBox>
+                <TextBox Width="25" Height="20" Name="menuOperationTextBoxValuePointY"  Background="WhiteSmoke"></TextBox>
             </StackPanel>
             <StackPanel Grid.Row="3" VerticalAlignment="Stretch">
                 <DockPanel VerticalAlignment="Stretch">
@@ -54,8 +54,8 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Name="menuLoadAdditionalImage" Content="_Load additional image" Click="OpenAdditionalFile_ToolBar" Height="30" ></Button>
-                    <Button Grid.Column="1" HorizontalAlignment="Stretch"  Content="_Perform operation" Height="30" Click="menuOperationButton_Clicked" />
+                    <Button Grid.Column="0" HorizontalAlignment="Stretch" Name="menuLoadAdditionalImage" Content="_Load additional image" Height="30" ></Button>
+                    <Button Grid.Column="1" HorizontalAlignment="Stretch"  Content="_Perform operation" Height="30"  />
                 </Grid>
             </StackPanel>
             <Grid Grid.Row="4">

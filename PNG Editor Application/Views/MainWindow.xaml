@@ -3,13 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:usercontrol="clr-namespace:PNG_Editor_Application.Views"
+        xmlns:topPanelControl="clr-namespace:PNG_Editor_Application.Views.TopPanel"
+        xmlns:centerPanelControl="clr-namespace:PNG_Editor_Application.Views.CenterPanel"
+        xmlns:bottomPanelControl="clr-namespace:PNG_Editor_Application.Views.BottomPanel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800">
-    <StackPanel Orientation="Horizontal">
-        <usercontrol:ImageInformationsView/>
-        <usercontrol:ImageHistogramView/>
-        <usercontrol:ImageHistogramView/>
-        <usercontrol:OperationAdjusterView/>
-    </StackPanel>
+        Title="MainWindow" Height="650" Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <topPanelControl:TopPanelView Grid.Row="0"/>
+        <centerPanelControl:CenterPanelView Grid.Row="1"/>
+        <bottomPanelControl:BottomPanel Grid.Row="2"/>
+    </Grid>
 </Window>

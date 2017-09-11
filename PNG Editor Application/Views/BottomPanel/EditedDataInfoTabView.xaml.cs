@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PNG_Editor_Application.Views
+namespace PNG_Editor_Application.Views.BottomPanel
 {
     /// <summary>
-    /// Interaction logic for ImageDisplayView.xaml
+    /// Interaction logic for EditedDataInfoTabView.xaml
     /// </summary>
-    public partial class ImageDisplayView : UserControl
+    public partial class EditedDataInfoTabView : UserControl
     {
-        public ImageDisplayView()
+        public EditedDataInfoTabView()
         {
             InitializeComponent();
         }

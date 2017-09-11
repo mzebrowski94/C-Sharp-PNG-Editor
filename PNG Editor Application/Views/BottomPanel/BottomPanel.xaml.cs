@@ -1,5 +1,4 @@
-﻿using PNG_Editor_Application.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PNG_Editor_Application.Views
+namespace PNG_Editor_Application.Views.BottomPanel
 {
     /// <summary>
-    /// Interaction logic for ImageInformationsView.xaml
+    /// Interaction logic for BottomPanel.xaml
     /// </summary>
-    public partial class ImageInformationsView : UserControl
+    public partial class BottomPanel : UserControl
     {
-        public ImageInformationsView()
+        public BottomPanel()
         {
             InitializeComponent();
-            DataContext = new ImageInformationsViewModel();
         }
     }
 }

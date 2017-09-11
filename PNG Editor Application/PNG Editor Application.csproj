@@ -61,22 +61,54 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModels\OperationAdjusterViewModel.cs" />
-    <Compile Include="Views\ImageDisplayView.xaml.cs">
+    <Compile Include="ViewModels\CenterPanel\ImageDisplayViewModel.cs" />
+    <Compile Include="ViewModels\TopPanel\OperationAdjusterViewModel.cs" />
+    <Compile Include="Views\BottomPanel\BottomPanel.xaml.cs">
+      <DependentUpon>BottomPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BottomPanel\EditedDataInfoTabView.xaml.cs">
+      <DependentUpon>EditedDataInfoTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BottomPanel\LoadedDataInfoTabView.xaml.cs">
+      <DependentUpon>LoadedDataInfoTabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CenterPanel\CenterPanelView.xaml.cs">
+      <DependentUpon>CenterPanelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CenterPanel\ImageDisplayView.xaml.cs">
       <DependentUpon>ImageDisplayView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\OperationAdjusterView.xaml.cs">
+    <Compile Include="Views\TopPanel\OperationAdjusterView.xaml.cs">
       <DependentUpon>OperationAdjusterView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Views\ImageDisplayView.xaml">
+    <Compile Include="Views\TopPanel\TopPanelView.xaml.cs">
+      <DependentUpon>TopPanelView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BottomPanel\BottomPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ImageHistogramView.xaml">
+    <Page Include="Views\BottomPanel\EditedDataInfoTabView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ImageInformationsView.xaml">
+    <Page Include="Views\BottomPanel\LoadedDataInfoTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CenterPanel\CenterPanelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CenterPanel\ImageDisplayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TopPanel\ImageHistogramView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TopPanel\ImageInformationsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -88,20 +120,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ViewModels\ImageHistogramViewModel.cs" />
-    <Compile Include="ViewModels\ImageInformationsViewModel.cs" />
+    <Compile Include="ViewModels\TopPanel\ImageHistogramViewModel.cs" />
+    <Compile Include="ViewModels\TopPanel\ImageInformationsViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="Views\ImageHistogramView.xaml.cs">
+    <Compile Include="Views\TopPanel\ImageHistogramView.xaml.cs">
       <DependentUpon>ImageHistogramView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ImageInformationsView.xaml.cs">
+    <Compile Include="Views\TopPanel\ImageInformationsView.xaml.cs">
       <DependentUpon>ImageInformationsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\OperationAdjusterView.xaml">
+    <Page Include="Views\TopPanel\OperationAdjusterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TopPanel\TopPanelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,9 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Commands\" />
-    <Folder Include="Views\BottomPanel\" />
-    <Folder Include="Views\CenterPanel\" />
-    <Folder Include="Views\TopPanel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

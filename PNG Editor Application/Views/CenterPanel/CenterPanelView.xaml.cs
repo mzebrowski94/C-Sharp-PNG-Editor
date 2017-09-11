@@ -1,5 +1,4 @@
-﻿using PNG_Editor_Application.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PNG_Editor_Application.Views
+namespace PNG_Editor_Application.Views.CenterPanel
 {
     /// <summary>
-    /// Interaction logic for ImageHistogramView.xaml
+    /// Interaction logic for CenterPanelView.xaml
     /// </summary>
-    public partial class ImageHistogramView : UserControl
+    public partial class CenterPanelView : UserControl
     {
-        public ImageHistogramView()
+        public CenterPanelView()
         {
             InitializeComponent();
-            DataContext = new ImageHistogramViewModel();
         }
     }
 }

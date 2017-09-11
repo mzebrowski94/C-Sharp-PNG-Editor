@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PNG_Editor_Application.ViewModels
+namespace PNG_Editor_Application.ViewModels.TopPanel
 {
     class ImageHistogramViewModel
     {

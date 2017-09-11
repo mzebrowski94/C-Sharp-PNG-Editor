@@ -1,4 +1,4 @@
-﻿using PNG_Editor_Application.ViewModels;
+﻿using PNG_Editor_Application.ViewModels.CenterPanel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PNG_Editor_Application.Views
+namespace PNG_Editor_Application.Views.CenterPanel
 {
     /// <summary>
-    /// Interaction logic for OperationAdjusterView.xaml
+    /// Interaction logic for ImageDisplayView.xaml
     /// </summary>
-    public partial class OperationAdjusterView : UserControl
+    public partial class ImageDisplayView : UserControl
     {
-        public OperationAdjusterView()
+        public ImageDisplayView()
         {
             InitializeComponent();
-            DataContext = new OperationAdjusterViewModel();
+            DataContext = new ImageDisplayViewModel();
         }
     }
 }

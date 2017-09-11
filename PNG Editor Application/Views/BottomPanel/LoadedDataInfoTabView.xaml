@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="PNG_Editor_Application.Views.BottomPanel.LoadedDataInfoTabView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PNG_Editor_Application.Views.BottomPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <TabControl Name="menuTabControl" Grid.Column="0" Grid.Row="1"  >
+            <TabItem  Header="Bytes Code">
+                <FlowDocumentReader Name="flowDocumentReaderSourceBytes" Zoom="80" ViewingMode="Scroll" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <FlowDocument Name="flowDocumentSourceBytes">
+                    </FlowDocument>
+                </FlowDocumentReader>
+            </TabItem>
+            <TabItem Header="ASCII Code">
+                <FlowDocumentReader Name="flowDocumentReaderSourceAscii" ViewingMode="Scroll" Zoom="80" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <FlowDocument Name="flowDocumentSourceAscii">
+                    </FlowDocument>
+                </FlowDocumentReader>
+            </TabItem>
+            <TabItem Header="IDATA data">
+                <FlowDocumentReader Name="flowDocumentReaderIdatData" ViewingMode="Scroll" Zoom="80" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <FlowDocument Name="flowDocumentIdatData">
+                    </FlowDocument>
+                </FlowDocumentReader>
+            </TabItem>
+            <TabItem Header="Datastream">
+                <FlowDocumentReader Name="flowDocumentReaderUnfilteredData" ViewingMode="Scroll" Zoom="80" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <FlowDocument Name="flowDocumentUnfilteredData">
+                    </FlowDocument>
+                </FlowDocumentReader>
+            </TabItem>
+            <TabItem Header="Additional Image datastream">
+                <FlowDocumentReader Name="flowDocumentReaderUnfilteredDataAdditinalImage" ViewingMode="Scroll" Zoom="80" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <FlowDocument Name="flowDocumentUnfilteredDataAdditinalImage">
+                    </FlowDocument>
+                </FlowDocumentReader>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>
