@@ -8,14 +8,23 @@
         xmlns:bottomPanelControl="clr-namespace:PNG_Editor_Application.Views.BottomPanel"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="1200">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="1.5*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <topPanelControl:TopPanelView Grid.Row="0"/>
-        <centerPanelControl:CenterPanelView Grid.Row="1"/>
-        <bottomPanelControl:BottomPanel Grid.Row="2"/>
-    </Grid>
+    <DockPanel>
+        <ToolBarTray Background="Azure" DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Command="{Binding OpenCmd}" Content="Open" ToolTip="Open new image" />
+            </ToolBar>
+        </ToolBarTray>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <topPanelControl:TopPanelView Grid.Row="0"/>
+            <centerPanelControl:CenterPanelView Grid.Row="1"/>
+            <bottomPanelControl:BottomPanel Grid.Row="2"/>
+        </Grid>
+    </DockPanel>
+    
 </Window>

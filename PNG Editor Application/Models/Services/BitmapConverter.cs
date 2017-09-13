@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace PNG_Editor_Application.Models.Services
 {
-    class ImageEditorService
+    public class BitmapConverter
     {
+        public BitmapConverter()
+        {
+
+        }
     }
 }

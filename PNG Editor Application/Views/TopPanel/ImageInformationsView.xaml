@@ -15,7 +15,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <!--<Setter Property="Grid.Column" Value="0"/>-->
-            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+            <Setter Property="TextBlock.FontWeight" Value="SemiBold"/>
         </Style>
         <Style x:Key="iStyle" TargetType="{x:Type TextBlock}">
             <!--<Setter Property="Control.FontFamily" Value="Tahoma"/>-->
@@ -58,25 +58,19 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Style="{StaticResource column0Style}" x:Name="imageIhdrChunkTitle" Grid.ColumnSpan="1" Grid.Row="0"><Run Text="Informations"/></TextBlock>
+        <TextBlock Style="{StaticResource column0Style}" x:Name="informationsTitle" Grid.ColumnSpan="2" Grid.Row="0"><Run Text="Informations"/></TextBlock>
         <TextBlock Style="{StaticResource column0Style}" x:Name="imageName"  Grid.Row="1"><Run Text="File name:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageNameInfo"  Grid.Row="1" Text="{Binding ImageName}"/>
-        <TextBlock Style="{StaticResource column0Style}" x:Name="imageDimensions" Grid.Row="2"><Run Text="Dimensions:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageDimensionsInfo" Grid.Row="2"><Run Text="-"/></TextBlock>
+        <TextBlock Style="{StaticResource column1Style}" x:Name="imageNameData"  Grid.Row="1" Text="{Binding ImageName}"/>
+        <TextBlock Style="{StaticResource column0Style}" x:Name="imageSize" Grid.Row="2"><Run Text="Size:"/></TextBlock>
+        <TextBlock Style="{StaticResource column1Style}" x:Name="imageSizeData" Grid.Row="2" Text="{Binding ImageSize}"/>
         <TextBlock Style="{StaticResource column0Style}" x:Name="imageBitDepth"  Grid.Row="3"><Run Text="Bit Depth:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageBitDepthInfo"  Grid.Row="3"><Run Text="-"/></TextBlock>
+        <TextBlock Style="{StaticResource column1Style}" x:Name="imageBitDepthInfo"  Grid.Row="3" Text="{Binding ImageBitDepth}"/>
         <TextBlock Style="{StaticResource column0Style}" x:Name="imageColorType" Grid.Row="4"><Run Text="Color type:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageColorTypeInfo" Grid.Row="4"><Run Text="-"/></TextBlock>
-        <TextBlock Style="{StaticResource column0Style}" x:Name="imageCompression" Grid.Row="5"><Run Text="Compression:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageCompressionInfo" Grid.Row="5"><Run Text="-"/></TextBlock>
-        <TextBlock Style="{StaticResource column0Style}" x:Name="imageFilter"  Grid.Row="6"><Run Text="Filter:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageFilterInfo"  Grid.Row="6"><Run Text="-"/></TextBlock>
+        <TextBlock Style="{StaticResource column1Style}" x:Name="imageColorTypeInfo" Grid.Row="4" Text="{Binding ImageColorType}"/>
         <TextBlock Style="{StaticResource column0Style}" x:Name="imageInterlace"  Grid.Row="7"><Run Text="Interlace:"/></TextBlock>
-        <TextBlock Style="{StaticResource column1Style}" x:Name="imageInterlaceInfo" Grid.Row="7"><Run Text="-"/></TextBlock>
+        <TextBlock Style="{StaticResource column1Style}" x:Name="imageInterlaceInfo" Grid.Row="7" Text="{Binding ImageInterlace}"/>
 
     </Grid>
 </UserControl>

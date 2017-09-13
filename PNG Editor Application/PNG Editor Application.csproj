@@ -61,7 +61,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\ImageData\PNGData\Chunks\IdatChunk.cs" />
+    <Compile Include="Models\ImageData\PNGData\Chunks\IhdrChunk.cs" />
+    <Compile Include="Models\ImageData\PNGData\Chunks\PlteChunk.cs" />
+    <Compile Include="Models\ImageData\PNGData\DecodedPNGData.cs" />
+    <Compile Include="Models\ImageData\Enums\E_BitDepth.cs" />
+    <Compile Include="Models\ImageData\Enums\E_ColorType.cs" />
+    <Compile Include="Models\ImageData\Enums\E_Interlace.cs" />
+    <Compile Include="Models\Services\ImageLoader.cs" />
     <Compile Include="ViewModels\CenterPanel\ImageDisplayViewModel.cs" />
+    <Compile Include="ViewModels\Commands\OpenCommand.cs" />
     <Compile Include="ViewModels\TopPanel\OperationAdjusterViewModel.cs" />
     <Compile Include="Views\BottomPanel\BottomPanel.xaml.cs">
       <DependentUpon>BottomPanel.xaml</DependentUpon>
@@ -143,13 +152,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ImageData\EditedPNG.cs" />
-    <Compile Include="Models\ImageData\LoadedPNG.cs" />
     <Compile Include="Models\ImageData\PNGImage.cs" />
-    <Compile Include="Models\Services\BitmapConverterService.cs" />
-    <Compile Include="Models\Services\ImageDecompressorService.cs" />
-    <Compile Include="Models\Services\ImageEditorService.cs" />
-    <Compile Include="Models\Services\ImageManagerService.cs" />
+    <Compile Include="Models\Services\BitmapConverter.cs" />
+    <Compile Include="Models\Services\ImageDecoder.cs" />
+    <Compile Include="Models\Services\ImageEditor.cs" />
+    <Compile Include="Models\Services\ImageManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
